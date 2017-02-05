@@ -1,4 +1,4 @@
-package teamtreehouse.com.iamhere;
+package teamtreehouse.com.iamhere.activity;
 
 import android.content.IntentSender;
 import android.location.Location;
@@ -64,7 +64,7 @@ public class BaseActivity extends FragmentActivity implements
 
 
     protected void handleNewLocation(Location location){
-        Log.d(TAG, location.toString());
+        Log.d(TAG, "lat:" + location.getLatitude() + " long:" + location.getLongitude());
 
     }
 

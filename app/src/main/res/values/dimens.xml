@@ -6,4 +6,5 @@
     <dimen name="lat_long_text_size">16sp</dimen>
     <dimen name="text_margin">24dp</dimen>
     <dimen name="layout_padding">4dp</dimen>
+    <dimen name="icon_image_size">40dp</dimen>
 </resources>

@@ -1,45 +1,60 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/latitude_label"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/latitude_label"
-        android:textSize="@dimen/lat_long_text_size" />
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/latitude_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/latitude_label"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/latitude_label"
-        android:textIsSelectable="true"
-        android:textSize="@dimen/lat_long_text_size" />
+        <TextView
+            android:id="@+id/latitude_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/latitude_label"
+            android:textSize="@dimen/lat_long_text_size" />
 
-    <TextView
-        android:id="@+id/longitude_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/longitude_label"
-        android:layout_marginTop="@dimen/text_margin"
-        android:textSize="@dimen/lat_long_text_size" />
+        <TextView
+            android:id="@+id/latitude_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/latitude_label"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/latitude_label"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/lat_long_text_size" />
 
-    <TextView
-        android:id="@+id/longitude_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/longitude_label"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/longitude_label"
-        android:textIsSelectable="true"
-        android:layout_marginTop="@dimen/text_margin"
-        android:textSize="@dimen/lat_long_text_size"/>
-</RelativeLayout>
+        <TextView
+            android:id="@+id/longitude_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/text_margin"
+            android:text="@string/longitude_label"
+            android:textSize="@dimen/lat_long_text_size" />
+
+        <TextView
+            android:id="@+id/longitude_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/longitude_label"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_toRightOf="@+id/longitude_label"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/lat_long_text_size" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
