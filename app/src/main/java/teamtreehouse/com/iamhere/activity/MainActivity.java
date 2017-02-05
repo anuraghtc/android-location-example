@@ -41,7 +41,7 @@ public class MainActivity extends BaseActivity {
 
     private ImageLoader mImageLoader;
     private RequestQueue mRequestQueue;
-    private String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=2000&type=museum&key=AIzaSyDSsuLaBf-bXpABI5nPjfFKVP7uGBbMHzI";
+    private String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=2000&type=restaurant&key=AIzaSyDSsuLaBf-bXpABI5nPjfFKVP7uGBbMHzI";
 
 
     @Override
