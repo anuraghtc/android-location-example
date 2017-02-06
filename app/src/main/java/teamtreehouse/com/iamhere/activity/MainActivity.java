@@ -39,8 +39,8 @@ public class MainActivity extends BaseActivity {
     protected TextView mLongitudeText;
     protected RecyclerView list;
 
-    private ImageLoader mImageLoader;
-    private RequestQueue mRequestQueue;
+    private static ImageLoader mImageLoader;
+    private static RequestQueue mRequestQueue;
     private String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=2000&type=restaurant&key=AIzaSyDSsuLaBf-bXpABI5nPjfFKVP7uGBbMHzI";
 
 
@@ -84,7 +84,7 @@ public class MainActivity extends BaseActivity {
         super.handleNewLocation(location);
 
         mLatitudeText.setText(Double.toString(location.getLatitude()));
-        mLongitudeText.setText(Double.toString(location.getLatitude()));
+        mLongitudeText.setText(Double.toString(location.getLongitude()));
 
 
         Uri requestUri = Uri.parse(url).buildUpon().appendQueryParameter("location", location.getLatitude() + "," + location.getLongitude()).build();
@@ -149,7 +149,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    private class PlaceVH extends RecyclerView.ViewHolder{
+    private static class PlaceVH extends RecyclerView.ViewHolder{
         TextView title;
         TextView address;
         NetworkImageView imageView;
